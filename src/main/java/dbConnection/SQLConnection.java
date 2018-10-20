@@ -10,7 +10,7 @@ import java.util.List;
 
 import business.shoppingCart.IShoppingCart;
 import business.shoppingCart.RowCart;
-import business.shoppingCart.ShoppingCart;
+import business.shoppingCart.ShoppingCartImpl;
 import models.ProductModel;
 import models.UserModel;
 
@@ -91,7 +91,7 @@ public class SQLConnection {
 	public IShoppingCart findCart(String nickName) throws SQLException {
 		ResultSet resultSet = statement.executeQuery("SELECT R.name, R.quantity"
 				+ " FROM Carts C INNER JOIN CartRows R ON C.id=R.id" + " WHERE C.nickName='" + nickName + "'");
-		IShoppingCart shoppingCart = new ShoppingCart();
+		IShoppingCart shoppingCart = new ShoppingCartImpl();
 		List<ProductModel> products = new ArrayList<ProductModel>();
 		while (resultSet.next()) {
 			ProductModel prod = new ProductModel();

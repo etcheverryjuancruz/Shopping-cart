@@ -3,7 +3,7 @@ package business.shoppingCart;
 import java.util.Collection;
 import java.util.Hashtable;
 
-public class ShoppingCart implements IShoppingCart {
+public class ShoppingCartImpl implements IShoppingCart {
 	/**
 	 * Hash whit the rows
 	 */
@@ -12,7 +12,7 @@ public class ShoppingCart implements IShoppingCart {
 	/**
 	 * constructor
 	 */
-	public ShoppingCart() {
+	public ShoppingCartImpl() {
 		products = new Hashtable<String, RowCart>();
 	}
 
