@@ -1,0 +1,7 @@
+version: '3'
+services:
+    shopping_cart:
+        image: shopping_cart
+        ports:
+            - 8080:80
+

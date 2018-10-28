@@ -3,8 +3,8 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>devops-unicen</groupId>
-	<artifactId>shoppingCart</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>shopping_cart</artifactId>
+	<version>0.0.1-snapshot</version>
 	<packaging>jar</packaging>
 
 
@@ -49,6 +49,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>shopping_cart</finalName>
 	</build>
 
 	<dependencies>

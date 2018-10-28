@@ -28,6 +28,13 @@ public class MainController {
 	protected static void setUP() throws Exception {
 		sql = SQLSingleton.getInstance();
 	}
+	
+	
+	
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String home () {
+		return "hello world";
+	}
 
 	/**
 	 * login user and generate a session
