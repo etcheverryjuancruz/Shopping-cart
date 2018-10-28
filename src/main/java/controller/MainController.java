@@ -26,7 +26,7 @@ public class MainController {
 	private static SQLConnection sql;
 
 	protected static void setUP() throws Exception {
-		sql = SQLSingleton.getInstance();
+		//sql = SQLSingleton.getInstance();
 	}
 	
 	
