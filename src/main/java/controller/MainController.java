@@ -31,7 +31,7 @@ public class MainController {
 	
 	
 	
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/welcome", method = RequestMethod.GET)
 	public String home () {
 		return "hello world and people";
 	}
