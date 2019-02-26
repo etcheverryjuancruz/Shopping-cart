@@ -33,7 +33,7 @@ public class MainController {
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home () {
-		return "hello world";
+		return "hello world and people";
 	}
 
 	/**
