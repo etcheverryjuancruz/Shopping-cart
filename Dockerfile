@@ -1,5 +1,4 @@
 FROM java:8
-ADD /target/shopping_cart.jar shopping_cart.jar
 ENV APP_HOME /var/www/html
 COPY . $APP_HOME
 RUN apt-get update -y && apt-get install maven -y
