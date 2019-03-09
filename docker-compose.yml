@@ -1,6 +1,7 @@
-version: '3'
+version: '2'
 services:
-    shopping_cart:
-        image: shopping_cart
-        ports:
-            - 8080:8080
+# The Application
+  app:
+    image: jetcheverry193/shopping_cart
+    ports:
+      - "8080:8080"
