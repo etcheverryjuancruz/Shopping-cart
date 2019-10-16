@@ -11,3 +11,8 @@ This is a functional shopping cart (just REST api). The features are:
 The solution use MySql as repository as well as Spring Boot and swagger for REST documentation.
 
 Thanks for reading!
+
+
+steps
+mvn clean package
+docker run -d -p 8080:8080 --name shopping shopping/shopping_cart
