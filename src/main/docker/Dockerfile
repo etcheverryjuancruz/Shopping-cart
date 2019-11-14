@@ -1,4 +1,5 @@
 FROM java:8
-ADD shopping_cart.jar app.jar
-EXPOSE 8080
+VOLUME /tmp
+ARG JAR_FILE
+COPY shopping_cart.jar app.jar
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
