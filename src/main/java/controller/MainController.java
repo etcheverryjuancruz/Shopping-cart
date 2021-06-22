@@ -26,11 +26,9 @@ public class MainController {
 	private static SQLConnection sql;
 
 	protected static void setUP() throws Exception {
-		//sql = SQLSingleton.getInstance();
+		sql = SQLSingleton.getInstance();
 	}
-	
-	
-	
+
 	@RequestMapping(value = "/welcome", method = RequestMethod.GET)
 	public String home () {
 		return "hello world and people";

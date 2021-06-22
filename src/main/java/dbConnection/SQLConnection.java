@@ -34,10 +34,10 @@ public class SQLConnection {
 	 */
 	public void setUp() {
 		try {
-			// load the MySQL driver
-			Class.forName("com.mysql.jdbc.Driver");
 			// connect to DB market
-			connect = DriverManager.getConnection("jdbc:mysql://localhost/Market?" + "user=sqluser&password=sqluserpw");
+			String username = "root";
+			String password = "sqluserpw";
+			connect = DriverManager.getConnection("jdbc:mysql://db:3306/Market?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true", username, password);
 			statement = connect.createStatement();
 		} catch (Exception e) {
 			e.printStackTrace();
