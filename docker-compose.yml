@@ -5,3 +5,19 @@ services:
     image: jetcheverry193/shopping_cart
     ports:
       - "8080:8080"
+    depends_on: 
+      - db
+    container_name: shopping_app
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_USER: sqluser
+      MYSQL_PASSWORD: sqluserpw
+      MYSQL_DATABASE: Market
+      MYSQL_ROOT_PASSWORD: sqluserpw
+    container_name: db_shopping
+    ports: 
+      - 3306:3306
+    volumes: 
+      - ./create.sql:/docker-entrypoint-initdb.d/init.sql
